@@ -74,7 +74,7 @@ end
 activate :deploy do |deploy|
   deploy.build_before = true
   deploy.method = :rsync
-  deploy.host   = "fr"
+  deploy.host   = "fancyrabbit.co"
   deploy.path   = "~/www/fancyrabbit.co"
   # Optional Settings
   # deploy.user  = "tvaughan" # no default
