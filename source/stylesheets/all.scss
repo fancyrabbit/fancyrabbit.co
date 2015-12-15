@@ -1,0 +1,29 @@
+body {
+  background-color: #9ce0bf;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h4 {
+  font-weight: normal;
+  font-size: 24px;
+  magin: 15px 0;
+}
+
+#wrapper {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.logo {
+  max-width: 100%;
+  width: 640px;
+}
