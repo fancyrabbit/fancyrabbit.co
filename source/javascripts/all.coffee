@@ -14,3 +14,10 @@ $ ->
       $activeClient.removeClass('active')
     else
       $client.toggleClass('active')
+
+
+  $('nav a[href^="#"]').on 'click', (e)->
+      e.preventDefault()
+      $('html, body').animate
+        scrollTop: $($(this).attr('href')).offset().top
+      , 500
