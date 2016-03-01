@@ -1,29 +1,135 @@
+@import url(https://fonts.googleapis.com/css?family=Maven+Pro:700,900);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+
+$green-light: rgb(240,255,246);
+$green: rgb(156,224,191);
+$green-dark: rgb(118,196,154);
+$orange: rgb(255,120,0);
+$gray: rgb(51,51,51);
+$yellow: rgb(253,255,243);
+
+$museo-slab: "museo-slab", serif;
+$maven: "Maven Pro", sans-serif;
+
+%maven {
+  font-family: $maven;
+  font-weight: 700;
+}
+%maven-black {
+  font-family: $maven;
+  font-weight: 900;
+}
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+html, button, input, select, textarea {
+  font-family: $museo-slab;
+}
+
 body {
-  background-color: #9ce0bf;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  background-color: $green-light;
+  color: $gray;
 }
 
-a {
-  color: #222;
-  text-decoration: none;
+h1, h2 {
+  @extend %maven-black;
 }
 
-a:hover {
-  text-decoration: underline;
+.container {
+  margin: 0 auto;
+  max-width:980px;
+  padding:0;
+  position:relative;
 }
 
-h4 {
-  font-weight: normal;
-  font-size: 24px;
-  magin: 15px 0;
+header {
+  background-color: $green;
+  margin-top:75px;
+  padding:100px 0px 40px;
+
+  .logo {
+    left:0;
+    position:absolute;
+    top:-145px;
+    width:100px;
+  }
+
+  .carrot {
+    bottom: -75px;
+    position: absolute;
+    right: 0px;
+    width: 85px;
+  }
+
+  h1 { 
+    display:none; 
+  }
+
+  p {
+    margin:0;
+  
+    &#tagline {
+      font-size:5vw;
+      font-weight:bold;
+    }
+
+    &.subtag {
+      @extend %maven;
+      color: white;
+      display:block;
+      font-size:3vw;
+      margin-top:10px;
+      text-transform: uppercase;
+    }
+  }
 }
 
-#wrapper {
-  text-align: center;
-  margin-top: 10%;
+nav {
+  background-color: $green-dark;
+  ul, li {
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+
+  li {
+    display:inline-block;
+    margin-right:80px;
+  }
+  a {
+    @extend %maven;
+    color: white;
+    display: block;
+    padding: 15px 0px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px; 
+  }
+  
 }
 
-.logo {
-  max-width: 100%;
-  width: 640px;
+section {
+  padding:40px 0;
+
+  h1 {
+    border-bottom: 2px solid $green;
+    display:inline-block;
+    font-size: 21px;
+    margin:0;
+    padding:0 15px 10px 0;
+    text-transform: uppercase;
+  }
+
 }
+
+@import 'about';
+@import 'contact';
+@import 'work';
+

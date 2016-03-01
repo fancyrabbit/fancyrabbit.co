@@ -1,0 +1,40 @@
+section.contact
+  .container
+    h1 FANCY RABBIT SOFTWARE CO.
+    p=data.lorem
+    
+    a.button(href="mailto:contact@fancyrabbit.co")
+      i.fa.fa-envelope-o
+      | work with us
+
+section.work
+  .container
+    h1 OUR WORK
+    p We’ve been lucky enough to work with some of the best companies and organizations across several industries.
+    .clients
+      -data.clients.each do |client|
+        .client-wrapper
+          .client
+            =image_tag "clients/#{client.logo}", alt: client.name
+            -count = client.projects.length
+            div(class="projects#{count}")
+              
+              -client.projects.each_with_index do |project,index|
+                .project(class="position#{index } #{project}")
+                  i(class="fa fa-#{project} ")
+
+
+  
+section.about
+  .container
+    h1 ABOUT US
+    .us
+      .person
+        =image_tag "rabbit-full.svg"
+        h2 MEREDITH LAVERTY
+        p=data.lorem
+      
+      .person
+        =image_tag "rabbit-full.svg"
+        h2 KEN MICKLES
+        p=data.lorem        

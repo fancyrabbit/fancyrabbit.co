@@ -1,0 +1,24 @@
+section.contact {
+  background-color: $yellow;
+
+  .button {
+    @extend %maven;
+    background-color:$orange;
+    box-sizing: border-box;
+    border-radius:22px;
+    color: white;
+    display: inline-block;
+    height:44px;
+    line-height:44px;
+    padding:0 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    i {
+      font-size:24px;
+      margin-right:10px;
+      margin-bottom: 4px;
+      vertical-align: middle;
+    }
+  }
+}
