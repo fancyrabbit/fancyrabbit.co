@@ -20,8 +20,7 @@ section.work#work
             div(class="projects#{count}")
               
               -client.projects.each_with_index do |project,index|
-                .project(class="position#{index } #{project}")
-                  i(class="fa fa-#{project} ")
+                .project(class="position#{index } #{project} fa fa-#{project}")
 
 
   
