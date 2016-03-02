@@ -79,14 +79,14 @@ section.work {
         display:block;
         font-size:0.7rem;
         margin-top:10%;
-
-        &.diamond { content:"ruby"; }
-        &.apple { content:"iOS"; }
-        &.android { content:"android"; }
-        &.desktop { content:"desktop"; }
-        &.database { content:"database"; }
-        &.drupal { content:"drupal"; }
       }
+
+      &.diamond:after { content:"ruby"; }
+      &.apple:after { content:"iOS"; }
+      &.android:after { content:"android"; }
+      &.desktop:after { content:"desktop"; }
+      &.database:after { content:"database"; }
+      &.drupal:after { content:"drupal"; }
 
       
     }
