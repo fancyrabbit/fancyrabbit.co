@@ -46,6 +46,10 @@ h1, h2 {
   max-width:980px;
   padding:0;
   position:relative;
+
+  @media screen and (max-width: 1000px) {
+    margin:0 20px;
+  }
 }
 
 header {
@@ -125,7 +129,6 @@ section {
     padding:0 15px 10px 0;
     text-transform: uppercase;
   }
-
 }
 
 svg.icon {
