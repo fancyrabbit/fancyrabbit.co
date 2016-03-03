@@ -1,48 +1,67 @@
 - name: Belly
+  link: https://www.bellycard.com/
   logo: belly.svg
   projects: 
-    - apple
-- name: HomeChef
+    - ios
+- name: Home Chef
+  link: https://www.homechef.com/
   logo: homechef.svg
   projects:
-    - desktop
-    - apple
+    - ios
     - android
-    - diamond
+    - ionic
+    - rails
+    - javascript
 - name: MightyNest
+  link: http://mightynest.com/
   logo: mightynest.svg
   projects:
-    - desktop
-    - database
-    - diamond
-    - drupal
+    - javascript
+    - rails
+    - php
 - name: HealthEngine
+  link: http://www.healthengine.com/
   logo: healthengine.svg
   projects:
-    - desktop
-    - database
-    - diamond
-- name: Belly
-  logo: belly.svg
+    - backbonejs
+    - ruby
+    - rails
+- name: Specify Design
+  link: http://specifydesign.com/
+  logo: specify.png
   projects: 
-    - apple
-- name: HomeChef
-  logo: homechef.svg
-  projects:
-    - desktop
-    - apple
-    - android
-    - diamond
-- name: MightyNest
-  logo: mightynest.svg
-  projects:
-    - desktop
-    - database
-    - diamond
+    - ruby
+    - javascript
+    - css
+    - html5
+- name: Chicago Artists Resource
+  link: http://www.chicagoartistsresource.org/
+  logo: car.png
+  projects: 
+    - php
+    - javascript
     - drupal
-- name: HealthEngine
-  logo: healthengine.svg
+- name: The Color Crew
+  link: http://thecolorcrew.com/
+  logo: color_crew.png
   projects:
-    - desktop
-    - database
-    - diamond
+    - ios
+    - ionic
+- name: Wet Scape Irrigation
+  link: https://wetscapeirrigation.com/
+  logo: wetscape.png
+  projects:
+    - ruby
+    - rails
+    - javascript
+- name: Dräger
+  link: http://www.draeger.com/sites/enus_us/pages/company/welcome.aspx
+  logo: draeger.svg
+  projects:
+    - ios
+- name: Wade's Comic Madness
+  link: https://comicmadness.com
+  logo: comic_madness.png
+  projects:
+    - rails
+    - javascript

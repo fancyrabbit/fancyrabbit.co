@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Maven+Pro:700,900);
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
 
 $green-light: rgb(240,255,246);
 $green: rgb(156,224,191);
@@ -127,6 +126,17 @@ section {
     text-transform: uppercase;
   }
 
+}
+
+svg.icon {
+  width: 20px;
+  height: 20px;
+  margin: 13px 8px 0 0;
+  float: left;
+
+  path {
+    fill: #fff;
+  }
 }
 
 @import 'about';

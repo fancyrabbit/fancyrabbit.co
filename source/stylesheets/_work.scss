@@ -54,13 +54,13 @@ section.work {
     padding-bottom:100%;
     width:100%;
     
-    img {
-      height:50%;
-      padding: 25%;
+    img.logo {
+      height: 70%;
+      width: 70%;
+      padding: 15%;
       position:absolute;
       transition: all 0.5s ease;
       transition-delay: 0.5s;
-      width:50%;
     }
 
     .project {
@@ -73,7 +73,11 @@ section.work {
       top:50%;
       transition: all 0.5s cubic-bezier(0.5, -0.5, 0.5, 1.5);
       transition-delay: 0;
-      width:20%;
+      height: 80px;
+
+      // path, .st0 {
+      //   fill: #333;
+      // }
 
       &:after {
         display:block;
@@ -81,14 +85,12 @@ section.work {
         margin-top:10%;
       }
 
-      &.diamond:after { content:"ruby"; }
-      &.apple:after { content:"iOS"; }
-      &.android:after { content:"android"; }
-      &.desktop:after { content:"desktop"; }
-      &.database:after { content:"database"; }
-      &.drupal:after { content:"drupal"; }
-
-      
+      // &.diamond:after { content:"ruby"; }
+      // &.apple:after { content:"iOS"; }
+      // &.android:after { content:"android"; }
+      // &.desktop:after { content:"desktop"; }
+      // &.database:after { content:"database"; }
+      // &.drupal:after { content:"drupal"; }
     }
 
     &.active {
@@ -99,7 +101,7 @@ section.work {
       width:200%;
       z-index: 1;
 
-      img {
+      img.logo {
         transition-delay: 0s;
         height:25%;
         width:25%;
