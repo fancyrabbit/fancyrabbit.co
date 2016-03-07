@@ -41,6 +41,8 @@
     - php
     - javascript
     - drupal
+    - html5
+    - css
 - name: The Color Crew
   link: http://thecolorcrew.com/
   logo: color_crew.png
