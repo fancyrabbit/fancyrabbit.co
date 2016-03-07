@@ -56,78 +56,6 @@ h1, h2 {
   }
 }
 
-header {
-  background-color: $green;
-  margin-top:75px;
-  padding:100px 0px 0px;
-  transition: all 0.5s ease;
-
-  .container {
-    box-sizing: border-box;
-    position:relative;
-  }
-
-  .logo {
-    left:0;
-    position:absolute;
-    top:-145px;
-    width:100px;
-  }
-
-  .carrot {
-    bottom: -75px;
-    position: absolute;
-    right: 0px;
-    width: 85px;
-  }
-
-  h1 { 
-    display:none; 
-  }
-
-  p {
-    margin:0;
-  
-    &#tagline {
-      font-size:5vw;
-      font-weight:bold;
-    }
-
-    &.subtag {
-      @extend %maven;
-      color: white;
-      display:block;
-      font-size:3vw;
-      margin-top:10px;
-      text-transform: uppercase;
-    }
-  }
-}
-
-nav {
-  background-color: $green-dark;
-  margin-top: 40px;
-  ul, li {
-    margin:0;
-    padding:0;
-    list-style:none;
-  }
-
-  li {
-    display:inline-block;
-    margin-right:80px;
-  }
-  a {
-    @extend %maven;
-    color: white;
-    display: block;
-    padding: 15px 0px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 18px; 
-  }
-}
-
 section {
   padding:40px 0;
 
@@ -138,6 +66,10 @@ section {
     margin:0;
     padding:0 15px 10px 0;
     text-transform: uppercase;
+
+    @media screen and (max-width: 568px) {
+      font-size:19px;
+    }
   }
 }
 
@@ -161,7 +93,10 @@ footer {
   }
 }
 
+@import 'header';
+@import 'nav';
 @import 'about';
 @import 'contact';
 @import 'work';
+
 

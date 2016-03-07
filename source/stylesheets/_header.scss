@@ -1,0 +1,65 @@
+header {
+  background-color: $green;
+  margin-top:75px;
+  padding:100px 0px 0px;
+  transition: all 0.5s ease;
+
+  .container {
+    box-sizing: border-box;
+    position:relative;
+  }
+
+  .logo {
+    left:0;
+    position:absolute;
+    top:-145px;
+    width:100px;
+  }
+
+  .carrot {
+    bottom: -75px;
+    position: absolute;
+    right: 0px;
+    width: 85px;
+  }
+
+  h1 { 
+    display:none; 
+  }
+
+  p {
+    margin:0;
+  
+    &#tagline {
+      font-size:5vw;
+      font-weight:bold;
+    }
+
+    &.subtag {
+      @extend %maven;
+      color: white;
+      display:block;
+      font-size:3vw;
+      margin-top:10px;
+      text-transform: uppercase;
+    }
+  }
+
+  @media screen and (max-width: 568px) {
+    padding: 80px 0 30px;
+
+    p.subtag {
+      font-size:4vw;
+    }
+
+    .logo {
+      top:-125px;
+      width:80px;
+    }
+
+    .carrot {
+      bottom:-50px;
+      width:65px;
+    }
+  }
+}

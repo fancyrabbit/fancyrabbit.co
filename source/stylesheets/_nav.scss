@@ -1,0 +1,119 @@
+nav {
+  background-color: $green-dark;
+  margin-top: 40px;
+  width:100%;
+
+  ul, li {
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+
+  li {
+    display:inline-block;
+    margin-right:80px;
+  }
+  a {
+    @extend %maven;
+    color: white;
+    display: block;
+    padding: 15px 0px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px; 
+  }
+  #nav-toggle { 
+    cursor: pointer;
+    display:none;
+    height: 45px;
+    position: absolute;
+    right: 10px;
+    top: 18px;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    width: 60px;
+    z-index:10;
+
+    span {
+      background: $orange;
+      border-radius: 5px;
+      display: block;
+      height: 5px;   
+      left: 0;
+      opacity: 1;
+      position: absolute;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+      width: 100%;
+    } 
+
+    span:nth-child(1) {
+      top: 0px;
+    }
+
+    span:nth-child(2),
+    span:nth-child(3) {
+      top: 18px;
+    }
+
+    span:nth-child(4) {
+      top: 36px;
+    }
+
+  }
+  &.open {
+    #nav-toggle {
+      span:nth-child(1) {
+        top: 18px;
+        width: 0%;
+        left: 50%;
+      }
+      span:nth-child(2) {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      span:nth-child(3) {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+      span:nth-child(4) {
+        top: 18px;
+        width: 0%;
+        left: 50%;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 568px) {
+    display:none;
+
+    // background-color:transparent;
+    // margin-top:0;
+    // position:absolute;
+    // top:0;
+
+
+    // #nav-toggle { display:block; }
+    // .menu.container { 
+    //   display:none; 
+    //   margin:0;
+    //   padding:0;
+    //   position:absolute;
+    //   right:0;
+    //   top:75px;
+    //   width:50%;
+    //   ul {
+    //     background-color:$green-dark;
+    //   }
+    //   li {
+    //     display:block;
+    //     margin-right:0;
+    //     text-align: right;
+    //   }
+    // }
+  }
+}
