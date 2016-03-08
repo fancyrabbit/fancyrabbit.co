@@ -16,7 +16,7 @@ section.work#work
         .client-wrapper
           .client
             = image_tag "clients/#{client.logo}", alt: client.name, class: "logo"
-            a.button href=client.link target="_blank"
+            a href=client.link target="_blank"
               = icon_tag "link"
               | view
             
