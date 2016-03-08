@@ -6,9 +6,10 @@ $ ->
 
   $('.client').on 'click', (e)->
     $client = $(@)
-    
+    $target = $(e.target)
+
     # website handling
-    return if $client.hasClass('active') && $(e.target).is('a')
+    return if $client.hasClass('active') && ($target.is('a') || $target.parent().is('a'))
     e.preventDefault()
 
     $activeClient = $client.parent('.client-wrapper').siblings().find('.client.active')
