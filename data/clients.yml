@@ -16,6 +16,8 @@
   link: http://mightynest.com/
   logo: mightynest.svg
   projects:
+    - angular
+    - drupal
     - javascript
     - rails
     - php
