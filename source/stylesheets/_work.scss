@@ -65,21 +65,25 @@ section.work {
 
     a {
       @extend %maven;
-      bottom:38%;
+      bottom:35%;
       color: $gray;
       font-size:.8em;
-      left:40%;
+      left:30%;
       line-height:32px;
       opacity:0;
       position:absolute;
+      text-align:center;
       text-decoration:none;
       text-transform: uppercase;
       transition: all 0.5s cubic-bezier(0.5, -0.5, 0.5, 1.5);
       transition-delay: 0;
-      width:20%;
+      width:40%;
 
       svg.icon {
-        margin: 6px 2px 6px 14px;
+        display:inline-block;
+        float:none;
+        margin: 6px 2px 6px 0;
+        vertical-align: bottom;
 
         path {
           stroke: $gray;
@@ -190,6 +194,10 @@ section.work {
           font-size:1.5rem;
         }
 
+        a {
+          bottom:30%;
+          font-size:.7em;
+        }
       }
 
       .client-wrapper:nth-of-type(3n+1),
