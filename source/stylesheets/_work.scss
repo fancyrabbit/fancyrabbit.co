@@ -11,7 +11,7 @@ $max-project-types:12;
       @for $position from 0 to $max-project-types {
          .position#{$position} {
           $angle: $angle-start + ($position * $angle-range/($projects - $modifier));
-          transform: rotate($angle) translate(200%) rotate(-$angle);
+          transform: rotate($angle) translate(250%) rotate(-$angle);
         }
       }
     }
@@ -55,9 +55,9 @@ section.work {
     width:100%;
     
     img.logo {
-      height: 70%;
-      width: 70%;
-      padding: 15%;
+      height: 60%;
+      width: 60%;
+      padding: 20%;
       position:absolute;
       transition: all 0.5s ease;
       transition-delay: 0.5s;
@@ -65,19 +65,20 @@ section.work {
 
     .project {
       font-size:2rem;
-      left:57%;
-      margin:-5% -15%;
+      left:56%;
+      margin:-5% -12%;
       opacity:0;
       position:absolute;
       text-align:center;
       top:50%;
       transition: all 0.5s cubic-bezier(0.5, -0.5, 0.5, 1.5);
       transition-delay: 0;
-      width:15%;
+      height: 12%;
+      width:12%;
 
-      // path, .st0 {
-      //   fill: #333;
-      // }
+      path, .st0, .st1, .st2 {
+        fill: $gray;
+      }
 
       &:after {
         display:block;
@@ -85,12 +86,6 @@ section.work {
         margin-top:10%;
       }
 
-      // &.diamond:after { content:"ruby"; }
-      // &.apple:after { content:"iOS"; }
-      // &.android:after { content:"android"; }
-      // &.desktop:after { content:"desktop"; }
-      // &.database:after { content:"database"; }
-      // &.drupal:after { content:"drupal"; }
     }
 
     &.active {
@@ -102,7 +97,6 @@ section.work {
       z-index: 1;
 
       img.logo {
-        @extend %grayscale;
         transition-delay: 0s;
         height:25%;
         width:25%;
