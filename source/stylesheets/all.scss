@@ -51,6 +51,17 @@ h1, h2 {
   }
 }
 
+.button {
+  @extend %maven;
+  background-color: $orange;
+  box-sizing: border-box;
+  border-radius:22px;
+  color:white;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 section {
   padding:40px 0;
 

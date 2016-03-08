@@ -63,6 +63,27 @@ section.work {
       transition-delay: 0.5s;
     }
 
+    a {
+      bottom:35%;
+      font-size:.8em;
+      left:40%;
+      line-height:32px;
+      opacity:0;
+      position:absolute;
+      transition: all 0.5s cubic-bezier(0.5, -0.5, 0.5, 1.5);
+      transition-delay: 0;
+      width:20%;
+
+      svg.icon {
+        margin: 6px 2px 6px 14px;
+
+        path {
+          stroke: white;
+          stroke-width: 2px;
+        }
+      }
+    }
+
     .project {
       font-size:2rem;
       left:56%;
@@ -97,10 +118,15 @@ section.work {
       z-index: 1;
 
       img.logo {
-        transition-delay: 0s;
         height:25%;
-        width:25%;
+        margin-top:-5%;
         padding:37.5%;
+        transition-delay: 0s;
+        width:25%;
+      }
+
+      a {
+        opacity:1;
       }
 
       .project {

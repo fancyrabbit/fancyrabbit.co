@@ -4,8 +4,13 @@
 $ ->
   $('#tagline').fitText(1.561)
 
-  $('.client').on 'click', ->
+  $('.client').on 'click', (e)->
     $client = $(@)
+    
+    # website handling
+    return if $client.hasClass('active') && $(e.target).is('a')
+    e.preventDefault()
+
     $activeClient = $client.parent('.client-wrapper').siblings().find('.client.active')
     
     if $activeClient.length
@@ -14,7 +19,6 @@ $ ->
       $activeClient.removeClass('active')
     else
       $client.toggleClass('active')
-
 
   $('nav a[href^="#"]').on 'click', (e)->
       e.preventDefault()
