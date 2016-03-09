@@ -2,18 +2,18 @@ doctype html
 html lang= "en"
   head
     meta(charset= "utf-8")
-    meta(name= "description" content= "Bespoke software design and curiosities. Est. 2014")
+    meta(name= "description" content= "Custom software design and curiosities. Est. 2014")
     meta(name= "viewport" content= "width=device-width, initial-scale=1")
     meta(content= "IE=edge,chrome=1" http-equiv= "X-UA-Compatible")
     title= current_page.data.title || "Fancy Rabbit Software Co."
-    = stylesheet_link_tag "normalize", "all"
+    = stylesheet_link_tag "all"
     = javascript_include_tag  "all"
     = favicon_tag "images/favicon2.png"
 
     script(src="https://use.typekit.net/nhz8sjb.js")
     javascript:
       try{
-        Typekit.load({ async: true });
+        Typekit.load({ async: false });
       }catch(e){}
 
   body
@@ -21,16 +21,16 @@ html lang= "en"
       .container
         h1 Fancy Rabbit Software Company
         p#tagline Expertly-engineered software
-        p.subtag crafted with care
+        p.subtag Crafted with care
         =image_tag("rabbit-full.svg", class: 'logo', alt: "Fancy Rabbit Software Co.")
         =image_tag("carrot.svg", class: 'carrot')
         
-      nav
-        .container  
-          ul
-            li =link_to "Contact Us", "#contact"
-            li =link_to "Our Work", "#work"
-            / li =link_to "About Us", "#about"
+      / nav
+      /   .container  
+      /     ul
+      /       li =link_to "Contact Us", "#contact"
+      /       li =link_to "Our Work", "#work"
+      /       / li =link_to "About Us", "#about"
 
     #main
       ==yield

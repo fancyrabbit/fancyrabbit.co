@@ -1,41 +1,40 @@
 section.contact#contact
   .container
     h1 Fancy Rabbit Software Co.
-    p=data.lorem
+    p Fancy Rabbit is a small development studio founded in 2014 by #{link_to "Ken Mickles", "http://github.com/kenmickles", target: "_blank"} and #{link_to "Meredith Laverty", "https://github.com/lavertym", target: "_blank"}. We make high quality custom software and original applications. 
     
     a.button href="mailto:contact@fancyrabbit.co"
       = icon_tag "envelope"
-      | work with us
+      | Contact Us
 
 section.work#work
   .container
-    h1 OUR WORK
-    p We’ve been lucky enough to work with some of the best companies and organizations across several industries.
+    h1 Our Work
+    p We do a lot of work with Ruby on Rails, iOS, Angular, and Ionic, but we don’t think of ourselves as a “Rails shop” or an “iOS shop”. We just like building good products for good clients, regardless of the technology.
     .clients
       - sorted_clients.each do |client|
         .client-wrapper
           .client
-            = image_tag "clients/#{client.logo}", alt: client.name, class: "logo"
-            a href=client.link target="_blank"
-              = icon_tag "link"
-              | view
-            
-            -count = client.projects.length
-            div(class="projects#{count}")
-              
+            = image_tag "clients/#{client.logo}", alt: client.name, class: "logo"            
+            .button-wrapper
+              a.button.button-sm href=client.link target="_blank"
+                = icon_tag "link"
+                | More Info
+
+            div class="projects#{client.projects.length}"
               - client.projects.each_with_index do |project, index|
                 = inline_svg("projects/#{project}.svg", class: "project position#{index} project-#{project}")
-  
-section.about#about
-  .container
-    h1 ABOUT US
-    .us
-      .person
-        =image_tag "rabbit-full.svg"
-        h2 MEREDITH LAVERTY
-        p=data.lorem
-      
-      .person
-        =image_tag "rabbit-full.svg"
-        h2 KEN MICKLES
-        p=data.lorem        
+
+- if false
+  section.about#about
+    .container
+      h1 ABOUT US
+      .us
+        .person
+          =image_tag "rabbit-full.svg"
+          h2 MEREDITH LAVERTY
+          p=data.lorem
+        .person
+          =image_tag "rabbit-full.svg"
+          h2 KEN MICKLES
+          p=data.lorem        

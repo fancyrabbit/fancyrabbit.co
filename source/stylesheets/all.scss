@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Maven+Pro:700,900);
+@import "normalize";
 
 $green-light: rgb(240,255,246);
 $green: rgb(156,224,191);
@@ -9,6 +10,8 @@ $yellow: rgb(253,255,243);
 
 $museo-slab: "museo-slab", serif;
 $maven: "Maven Pro", sans-serif;
+
+$phone-max-width: 568px;
 
 %maven {
   font-family: $maven;
@@ -40,6 +43,14 @@ h1, h2 {
   @extend %maven-black;
 }
 
+a, a:visited {
+  color: $orange;
+}
+
+a:hover {
+  color: darken($orange, 10%);
+}
+
 .container {
   margin: 0 auto;
   max-width:980px;
@@ -48,6 +59,20 @@ h1, h2 {
 
   @media screen and (max-width: 1000px) {
     margin:0 20px;
+  }
+}
+
+@-webkit-keyframes hvr-icon-pop {
+  50% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+
+@keyframes hvr-icon-pop {
+  50% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
   }
 }
 
@@ -60,6 +85,59 @@ h1, h2 {
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
+  line-height:44px;
+  padding:0 20px;
+  white-space: nowrap;
+
+  .icon {
+    width: 20px;
+    height: 20px;
+    margin: 13px 8px 0 0;
+    float: left;
+
+    path {
+      fill: #fff;
+      stroke: white;
+      stroke-width: 2px;
+    }
+  }
+
+  &.button-sm {
+    font-size: .8em;
+    line-height: 32px;
+
+    .icon {
+      margin: 6px 2px 6px -4px;
+    }
+
+    @media screen and (max-width: $phone-max-width) {
+      font-size: .7em;
+      line-height: 28px;
+      padding: 0 14px;
+
+      .icon {
+        margin-top: 4px;
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+  &:hover {
+    .icon {
+      -webkit-animation-name: hvr-icon-pop;
+      animation-name: hvr-icon-pop;
+      -webkit-animation-duration: 0.3s;
+      animation-duration: 0.3s;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear;
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1;
+    }
+  }
+}
+
+a.button, a.button:hover {
+  color: #fff;
 }
 
 section {
@@ -73,20 +151,13 @@ section {
     padding:0 15px 10px 0;
     text-transform: uppercase;
 
-    @media screen and (max-width: 568px) {
+    @media screen and (max-width: $phone-max-width) {
       font-size:19px;
     }
   }
-}
 
-svg.icon {
-  width: 20px;
-  height: 20px;
-  margin: 13px 8px 0 0;
-  float: left;
-
-  path {
-    fill: #fff;
+  p {
+    font-size: 17px;
   }
 }
 
@@ -100,8 +171,8 @@ footer {
 }
 
 @import 'header';
-@import 'nav';
-@import 'about';
+// @import 'nav';
+// @import 'about';
 @import 'contact';
 @import 'work';
 

@@ -1,7 +1,7 @@
 header {
   background-color: $green;
   margin-top:75px;
-  padding:100px 0px 0px;
+  padding:100px 0px 30px;
   transition: all 0.5s ease;
 
   .container {
@@ -17,7 +17,7 @@ header {
   }
 
   .carrot {
-    bottom: -75px;
+    bottom: -65px;
     position: absolute;
     right: 0px;
     width: 85px;
@@ -45,7 +45,7 @@ header {
     }
   }
 
-  @media screen and (max-width: 568px) {
+  @media screen and (max-width: $phone-max-width) {
     padding: 80px 0 30px;
 
     p.subtag {

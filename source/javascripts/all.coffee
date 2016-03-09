@@ -11,6 +11,7 @@ $ ->
     # website handling
     return if $client.hasClass('active') && ($target.is('a') || $target.parent().is('a'))
     e.preventDefault()
+    e.stopPropagation()
 
     $activeClient = $client.parent('.client-wrapper').siblings().find('.client.active')
     
@@ -20,6 +21,9 @@ $ ->
       $activeClient.removeClass('active')
     else
       $client.toggleClass('active')
+
+      $('body').one 'click', (e) ->
+        $('.client').removeClass('active')
 
   $('nav a[href^="#"]').on 'click', (e)->
       e.preventDefault()
