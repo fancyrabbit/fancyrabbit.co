@@ -20,6 +20,11 @@ $max-project-types:12;
 
 
 section.work {
+
+  .container {
+    overflow-x:hidden;
+  }
+
   .clients {
     @extend %clearfix;
     margin-top: 50px;
