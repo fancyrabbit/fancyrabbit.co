@@ -20,7 +20,7 @@ $max-project-types:12;
 
 
 section.work {
-  overflow-x:hidden;
+  overflow:hidden;
 
   .clients {
     @extend %clearfix;
@@ -47,7 +47,7 @@ section.work {
     -webkit-mask: $mask top left / cover;
     -o-mask: $mask top left / cover;
     -ms-mask: $mask top left / cover;
-    background:$mask center center no-repeat white;
+    background:$mask center center no-repeat transparent;
     cursor:pointer;
     overflow:hidden;
     position:absolute;
