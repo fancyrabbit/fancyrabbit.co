@@ -30,6 +30,19 @@ $phone-max-width: 568px;
   }
 }
 
+@mixin screen-phone {
+  @media screen and (max-width: $phone-max-width) {
+    @content;
+  }
+}
+
+// iPhone 4s, 5, 5s
+@mixin screen-sm {
+  @media only screen and (max-device-width: 320px) {
+    @content;
+  }
+}
+
 html, button, input, select, textarea {
   font-family: $museo-slab;
 }
@@ -80,19 +93,19 @@ a:hover {
   @extend %maven;
   background-color: $orange;
   box-sizing: border-box;
-  border-radius:22px;
+  border-radius:1.5em;
   color:white;
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
-  line-height:44px;
-  padding:0 20px;
+  line-height:3em;
+  padding:0 1em;
   white-space: nowrap;
 
   .icon {
-    width: 20px;
-    height: 20px;
-    margin: 13px 8px 0 0;
+    width: 1em;
+    height: 1em;
+    margin: 1em 0.5em 0 0;
     float: left;
 
     path {
@@ -102,24 +115,37 @@ a:hover {
     }
   }
 
+  @include screen-phone {
+    font-size:.8em;
+  }
+
+  @include screen-sm {
+    font-size:.7em;
+  }
+
   &.button-sm {
     font-size: .8em;
-    line-height: 32px;
+    line-height: 2em;
+
+    @include screen-phone {
+      font-size: .7em;
+      padding: 0 1em;
+
+    }
+
+    @include screen-sm {
+      font-size:.5em;
+
+    }
 
     .icon {
-      margin: 6px 2px 6px -4px;
-    }
-
-    @media screen and (max-width: $phone-max-width) {
-      font-size: .7em;
-      line-height: 28px;
-      padding: 0 14px;
-
-      .icon {
-        margin-top: 4px;
-        margin-bottom: 4px;
+      margin: .55em .2em 0 -.3em;
+      
+      @include screen-sm {
+        margin: .6em .2em .4em -.3em;
       }
     }
+
   }
 
   &:hover {
@@ -146,18 +172,19 @@ section {
   h1 {
     border-bottom: 2px solid $green;
     display:inline-block;
-    font-size: 21px;
+    font-size: 1.2em;
     margin:0;
     padding:0 15px 10px 0;
     text-transform: uppercase;
 
-    @media screen and (max-width: $phone-max-width) {
-      font-size:19px;
+    @include screen-phone {
+      font-size:1.1em;
     }
   }
 
   p {
-    font-size: 17px;
+    line-height:1.6em;
+    margin-bottom: 1.6em;
   }
 }
 

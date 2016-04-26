@@ -92,7 +92,7 @@ nav {
     }
   }
   
-  @media screen and (max-width: $phone-max-width) {
+  @include screen-phone {
     display:none;
 
     // background-color:transparent;
