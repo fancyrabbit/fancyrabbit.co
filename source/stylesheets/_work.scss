@@ -1,5 +1,6 @@
 // project variables
 $max-project-types:12;
+$transition-time: 0.25s;
 
 @mixin project-styles($angle-start: -90deg, $angle-range: 360deg){
   $modifier: 0;
@@ -21,6 +22,7 @@ $max-project-types:12;
 
 section.work {
   overflow:hidden;
+  padding-bottom: 80px;
 
   .clients {
     @extend %clearfix;
@@ -51,8 +53,8 @@ section.work {
     cursor:pointer;
     overflow:hidden;
     position:absolute;
-    transition: all 0.5s ease;
-    transition-delay: 0.5s;
+    transition: all $transition-time ease;
+    transition-delay: $transition-time;
     padding-bottom:100%;
     width:100%;
     
@@ -61,8 +63,8 @@ section.work {
       width: 60%;
       padding: 20%;
       position:absolute;
-      transition: all 0.5s ease;
-      transition-delay: 0.5s;
+      transition: all $transition-time ease;
+      transition-delay: $transition-time;
     }
 
     > a {
@@ -77,7 +79,7 @@ section.work {
       text-align:center;
       text-decoration:none;
       text-transform: uppercase;
-      transition: all 0.5s cubic-bezier(0.5, -0.5, 0.5, 1.5);
+      transition: all $transition-time cubic-bezier(0.5, -0.5, 0.5, 1.5);
       transition-delay: 0;
       width:40%;
 
@@ -112,7 +114,7 @@ section.work {
 
       a {
         opacity:0;
-        transition: all 0.5s cubic-bezier(0.5, -0.5, 0.5, 1.5);
+        transition: all $transition-time cubic-bezier(0.5, -0.5, 0.5, 1.5);
         transition-delay: 0;
       }
 
@@ -126,7 +128,7 @@ section.work {
       position:absolute;
       text-align:center;
       top:50%;
-      transition: all 0.5s cubic-bezier(0.5, -0.5, 0.5, 1.5);
+      transition: all $transition-time/2 cubic-bezier(0.5, -0.5, 0.5, 1.5);
       transition-delay: 0;
       height: 12%;
       width:12%;
@@ -148,7 +150,7 @@ section.work {
       padding-bottom:200%;
       transition-delay: 0s;
       width:200%;
-      z-index: 1;
+      z-index: 2;
 
       img.logo {
         height:25%;
@@ -164,15 +166,24 @@ section.work {
 
       .project {
         opacity:1;
-        transition-delay: 0.5s;
+        transition-delay: $transition-time;
 
         @for $i from 1 to $max-project-types {
           &:nth-of-type(#{$i}) {
-            $delay: (0.5s + ($i - 1)* .1s);
+            $delay: ($transition-time + ($i - 1)* .1s);
             transition-delay: $delay;
           }
         }
       }
+    }
+
+    &.deactivating {
+      z-index: 1;
+      // transition-delay: $transition-time/2;
+
+      // img.logo {
+      //   transition-delay: $transition-time/2;
+      // }
     }
   }
 
